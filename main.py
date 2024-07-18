@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from aiogram import Bot, Dispatcher, executor
 
 # Создание экземпляра Telegram-бота
-bot = Bot(token='6313719313:AAEl6I4WJk7xLO3vLofHGTVfztgGAnh5fK8')
+bot = Bot(token='your token')
 dp = Dispatcher(bot)
 
 # Список уже отправленных объявлений
