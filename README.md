@@ -1,26 +1,24 @@
-Авито Бот для Telegram
-Обзор
-Avito Bot - это бот для Telegram, разработанный на Python, который парсит данные с Avito и представляет их в удобочитаемом формате. Он предоставляет следующую информацию для каждого объявления:
+# Avito Bot for Telegram
 
-Описание
-Цена
-Город
-Ссылка на оригинальное объявление
-Функции
-Автоматический парсинг данных: Бот автоматически парсит новые объявления с Avito и форматирует их для удобного чтения.
-Настраиваемые интервалы: По умолчанию бот отправляет новые объявления каждые 2 минуты. Интервал можно настроить в соответствии с вашими потребностями.
-Удобство использования: Предоставляет краткую и понятную информацию прямо в вашем чате Telegram.
-Исходный регион: По умолчанию используется объявления из Республики Крым, но это можно кастомизировать.
-Используемые технологии
-Python
-aiogram
-asyncio
-aiohttp
-BeautifulSoup
-Как использовать
-Клонируйте репозиторий: git clone https://github.com/yourusername/avito-bot-telegram.git
-Установите зависимости: pip install -r requirements.txt
-Настройте параметры: Установите предпочитаемый интервал, регион и другие настройки в файле config.py.
-Запустите бота: python bot.py
-Вклад
-Будем рады любым вкладом! Открывайте задачи и отправляйте пул-реквесты для улучшения функциональности и удобства использования этого бота.
+## Overview
+
+Avito Bot is a Telegram bot developed using Python that scrapes data from Avito and presents it in an easy-to-read format. It provides the following details for each listing:
+- **Description**
+- **Price**
+- **City**
+- **Link to the original listing**
+
+## Features
+
+- **Automated Data Scraping**: The bot automatically scrapes new listings from Avito and formats them for easy reading.
+- **Customizable Intervals**: By default, the bot sends new listings every 2 minutes. The interval can be adjusted to suit your needs.
+- **User-friendly**: Provides concise and clear information directly in your Telegram chat.
+- **Initial Region**: The default setup uses listings from the Republic of Crimea, but this can be customized.
+
+## Technologies Used
+
+- **Python**
+- **aiogram**
+- **asyncio**
+- **aiohttp**
+- **BeautifulSoup**
