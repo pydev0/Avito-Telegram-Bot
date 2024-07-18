@@ -1,4 +1,4 @@
-# Avito Bot for Telegram
+# Avito Telegram Bot
 
 ## Overview
 
