@@ -3,11 +3,11 @@ import aiohttp
 from bs4 import BeautifulSoup
 from aiogram import Bot, Dispatcher, executor
 
-# Создание экземпляра Telegram-бота
+
 bot = Bot(token='your token')
 dp = Dispatcher(bot)
 
-# Список уже отправленных объявлений
+
 sent_ads = []
 
 
@@ -30,17 +30,17 @@ async def parse_ads(url):
         price = ad.find('div', class_='price-price-JP7qe').text.strip()
         link = ad.find('a')['href']
 
-        ad_id = link  # Используем ссылку объявления как идентификатор
+        ad_id = link
 
         if ad_id not in sent_ads:
-            # Отправка данных в чат бота
+            
             await bot.send_message(chat_id='-961407817',
                                    text=f'Описание:  {title}'
                                         f'\n\nЦена:  {price}'
                                         f'\n\nГород:  {city_clear1}'
                                         f'\n\nСсылка:  https://www.avito.ru{link}')
 
-            sent_ads.append(ad_id)  # Добавляем идентификатор объявления в список уже отправленных объявлений
+            sent_ads.append(ad_id)
 
 
 async def main():
@@ -50,13 +50,13 @@ async def main():
     while True:
         url = f'{base_url}?p={page}'
 
-        # Запуск парсера для текущей страницы
+        
         await parse_ads(url)
 
-        # Переход к следующей странице
+        
         page += 1
 
-        # Ожидание 60 секунд перед следующим запросом
+        
         await asyncio.sleep(60)
 
 
